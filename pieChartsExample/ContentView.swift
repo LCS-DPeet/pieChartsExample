@@ -22,16 +22,25 @@ struct ContentView: View {
         VStack {
             Chart {
                 ForEach(coffeeSales, id: \.name) { coffee in
+                    
+                    SectorMark(
+                        angle: .value("Cup", coffee.count),
 
-                    BarMark(
-                        x: .value("Cup", coffee.count)
+                        angularInset: 2.0
                     )
                     .foregroundStyle(by: .value("Type", coffee.name))
+                    
+                    .annotation(position: .overlay) {
+                        Text("\(coffee.count)")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                    }
                 }
             }
-            .frame(height: 100)
+            .frame(height: 500)
         }
         .padding()
+        
     }
 }
 
