@@ -29,6 +29,7 @@ struct ContentView: View {
                         angularInset: 2.0
                     )
                     .foregroundStyle(by: .value("Type", coffee.name))
+                    .cornerRadius(10.0)
                     
                     .annotation(position: .overlay) {
                         Text("\(coffee.count)")
