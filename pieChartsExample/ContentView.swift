@@ -25,7 +25,7 @@ struct ContentView: View {
                     
                     SectorMark(
                         angle: .value("Cup", coffee.count),
-
+                        innerRadius: .ratio(0.65),
                         angularInset: 2.0
                     )
                     .foregroundStyle(by: .value("Type", coffee.name))
