@@ -43,6 +43,7 @@ struct ContentView: View {
                 Text ("☕️")
                     .font(.system(size:100))
             }
+            
         }
         .padding()
         
